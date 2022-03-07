@@ -18,10 +18,10 @@ table.push(
     , ['Hard Drive', 'Second value']
 );
 
-//console.log(table.toString());
+console.log(table.toString());
 
 
-exec('ls | grep js', (err, stdout, stderr) => {
+exec('sudo vgs', (err, stdout, stderr) => {
     if (err) {
         //some err occurred
         console.error(err)
