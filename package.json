@@ -1,0 +1,19 @@
+{
+  "name": "auto-server-stats",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjanders6/auto-server-stats.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mjanders6/auto-server-stats/issues"
+  },
+  "homepage": "https://github.com/mjanders6/auto-server-stats#readme"
+}
