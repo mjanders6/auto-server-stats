@@ -12,6 +12,9 @@
   },
   "author": "",
   "license": "ISC",
+  "bin": {
+    "comp-stats": "./app.js"
+  },
   "bugs": {
     "url": "https://github.com/mjanders6/auto-server-stats/issues"
   },
@@ -20,6 +23,7 @@
     "child_process": "^1.0.2",
     "cli-table": "^0.3.11",
     "dotenv": "^16.0.0",
-    "inquirer": "^8.2.0"
+    "inquirer": "^8.2.0",
+    "systeminformation": "^5.11.8"
   }
 }
