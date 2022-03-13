@@ -26,7 +26,7 @@ async function compData() {
             { Memory: [`Free: ${memData.free/1000000000} | Used: ${memData.used/1000000000} | Total: ${memData.total/1000000000}`] },
             { System: [`Manufacturer: ${system.manufacturer} | Model: ${system.model}`]},
             { BIOS: [`Vendor: ${bios.vendor} | Version: ${bios.version} | Release Date: ${bios.releaseDate} | Revision: ${bios.revision}`]},
-            { Motherboard: [`Manufacturer: ${motherboard.manufacturer} | MOdel: ${motherboard.model} | Version: ${motherboard.version} | Memory Slots: ${motherboard.memSlots}`]},
+            { Motherboard: [`Manufacturer: ${motherboard.manufacturer} | Model: ${motherboard.model} | Version: ${motherboard.version} | Memory Slots: ${motherboard.memSlots}`]},
             { OS: [`Op. System: ${os.platform} | Distro: ${os.distro} | Release: ${os.release} | Host Name: ${os.hostname} | Kernal: ${os.kernel}`]}
         )
         return table
