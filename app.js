@@ -3,26 +3,26 @@
 const si = require('systeminformation');
 const Table = require('cli-table');
 
-let cpuData = () => {
+var comp_Data = new Array()
 
-    var table = new Table({
-        head: ['Function', 'Info']
-        , colWidths: [25, 50]
-    });
+var table = new Table({
+    head: ['Function', 'Info']
+    , colWidths: [25, 50]
+});
 
-    si.cpu()
-        .then(data => {
-            let brand = data.brand;
-            let manu = data.manufacturer;
-            let vendor = data.vendor;
-            let speed = data.speed;
-            let cores = data.cores;
+async function compData() {
+    try {
+        const cpuData = await si.cpu();
+        const memData = await si.mem();
 
-            return table.push(['CPU', [brand, manu]])
-        })
-        .catch(error => console.error(error));
-
+        comp_Data.push({ CPU: [cpuData.brand, cpuData.model]}, {Memory: [memData.free, memData.used, memData.total] })
+        return comp_Data
+    } catch (e) {
+        console.log(e)
+    }
 }
 
 
-
+compData()
+    .then(data => console.log(data))
+    .catch(e => console.error(e))
